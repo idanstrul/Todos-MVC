@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(169, 255, 251);
+}
+
+.overall-container {
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+}
+
+
+section.controls {
+    display: flex;
+    background-color: aliceblue;
+}
+
+.todo-filter {
+    padding: 10px;
+    display: inline-block;
+}
+
+section.main-content {
+    margin: 20px;
+}
+
+.todo-sort {
+    padding: 10px;
+    display: inline-block;
+}
+
+table {
+    width: 100%;
+}
+
+td:first-Child {
+    text-align: left;
+}
+
+.todo-stat {
+    background-color: lightslategray;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+.todo-stat span {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.importance-input {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.importance-input p {
+    display: inline;
+}
+
+section.add-todo {
+    margin: 40px;
+}
+
+.done {
+    text-decoration: line-through;
+}

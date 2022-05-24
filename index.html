@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos MVC</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <div class="overall-container">
+        <h1>Todos MVC</h1>
+
+        <section class="controls">
+            <section class="todo-filter">
+                <h4>Filter Todos</h4>
+                <select onchange="onSetFilter(this.value)">
+                    <option value="ALL">All</option>
+                    <option value="DONE">Done</option>
+                    <option value="ACTIVE">Active</option>
+                </select>
+            </section>
+            <section class="todo-sort">
+                <h4>Sort Todos</h4>
+                <select onchange="onSetSort(this.value)">
+                    <option value="TEXT">Text</option>
+                    <option value="CREATED">Time Created</option>
+                    <option value="IMPORTANCE">Importance</option>
+                </select>
+            </section>
+        </section>
+
+        <section class="main-content">
+            <table>
+                <tbody class="todo-table">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section class="add-todo">
+            <input type="text" name="todoTxt" placeholder="What need to be done?" />
+            <div class="importance-input">
+                <p>Set importance: </p>
+
+                <input type="radio" id="option1" name="todoImportance" value="1" checked>
+                <label for="option1">1</label>
+
+                <input type="radio" id="option2" name="todoImportance" value="2">
+                <label for="option2">2</label>
+
+                <input type="radio" id="option3" name="todoImportance" value="3">
+                <label for="option3">3</label>
+            </div>
+            <button onclick="onAddTodo()">Add</button>
+        </section>
+
+
+        <section class="todo-stat">
+            Total Todos:
+            <span class="todos-total-count">3</span>
+            Active:
+            <span class="todos-active-count">2</span>
+        </section>
+
+    </div>
+
+    <script src="js/services/utils-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/todo-service.js"></script>
+    <script src="js/todo-controller.js"></script>
+</body>
+
+</html>
